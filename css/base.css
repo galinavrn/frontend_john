@@ -1,0 +1,114 @@
+/*----------------------------------------------------patterns--
+@media (max-width: 1280px)
+  @media (max-width: 1152px)
+@media (max-width: 1024px)
+@media (max-width: 854px) ! 16px
+@media (max-width: 768px)
+@media (max-width: 600px)
+  @media (max-width: 480px)
+@media (max-width: 360px)
+
+&nbsp;
+
+line-height: calc((60 / 44) * 100%);
+
+calc(32px + 40 * ((100vw - 320px)/(1280 - 320)));
+--------------------------------------------------------------*/
+/*---------------------------------------------for-development*/
+.for-development {
+  height: 100vh;
+}
+/*------------------------------------------------------------*/
+/*--------------------------------------------------------base*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus, :active, a:focus, a:active {
+  outline: none;
+}
+a, img, header, nav, main, aside, footer, details, summary {
+  display: block;
+}
+html, body {
+  min-width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input, button, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+input::-ms-clear {
+  display: none;
+}
+button, select {
+  cursor: pointer;
+  text-transform: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+a, a:visited, a:hover, a:focus {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+mark {
+  background-color: inherit;
+  color: inherit;
+}
+/*------------------------------------------------------------*/
+/*---------------------------------------------------normalize*/
+b, strong {
+  font-weight: bolder;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -4px;
+}
+sup {
+  top: -8px;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+textarea {
+  overflow: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+/*------------------------------------------------------------*/
+/*---------------------------------------------------------end*/
