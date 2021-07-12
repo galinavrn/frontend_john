@@ -1,25 +1,5 @@
-/*----------------------------------------------------patterns--
-@media (max-width: 1280px)
-  @media (max-width: 1152px)
-@media (max-width: 1024px)
-@media (max-width: 854px) ! 16px
-@media (max-width: 768px)
-@media (max-width: 600px)
-  @media (max-width: 480px)
-@media (max-width: 360px)
-
-&nbsp;
-
-line-height: calc((60 / 44) * 100%);
-
-calc(32px + 40 * ((100vw - 320px)/(1280 - 320)));
---------------------------------------------------------------*/
-/*---------------------------------------------for-development*/
-.for-development {
-  height: 100vh;
-}
-/*------------------------------------------------------------*/
-/*--------------------------------------------------------base*/
+/*--------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------base*/
 * {
   margin: 0;
   padding: 0;
@@ -30,11 +10,12 @@ calc(32px + 40 * ((100vw - 320px)/(1280 - 320)));
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-:focus, :active, a:focus, a:active {
+*:focus, *:active {
   outline: none;
+  border: none;
 }
-a, img, header, nav, main, aside, footer, details, summary {
-  display: block;
+::-moz-focus-inner {
+  border: 0;
 }
 html, body {
   min-width: 100%;
@@ -45,23 +26,12 @@ html, body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-input, button, textarea {
-  font-family: inherit;
-  font-size: 100%;
+a, img, details, summary, figcaption, figure, hgroup, menu, 
+header, nav, main, article, aside, section, footer {
+  display: block;
 }
-input::-ms-clear {
+summary::-webkit-details-marker {
   display: none;
-}
-button, select {
-  cursor: pointer;
-  text-transform: none;
-}
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-a, a:visited, a:hover, a:focus {
-  text-decoration: none;
 }
 ul li {
   list-style: none;
@@ -73,14 +43,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+b, strong {
+  font-weight: bolder;
+}
 mark {
   background-color: inherit;
   color: inherit;
-}
-/*------------------------------------------------------------*/
-/*---------------------------------------------------normalize*/
-b, strong {
-  font-weight: bolder;
 }
 sub, sup {
   font-size: 75%;
@@ -89,26 +57,128 @@ sub, sup {
   vertical-align: baseline;
 }
 sub {
-  bottom: -4px;
+  bottom: -0.25em;
 }
 sup {
-  top: -8px;
+  top: -0.5em;
 }
-button, [type="button"], [type="reset"], [type="submit"] {
-  -webkit-appearance: button;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-indent: 0;
+  border-color: inherit;
+}
+audio, canvas, video {
+  display: inline-block;
+  max-width: 100%;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+/*--------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------input*/
+a, a:visited, a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+input::-ms-clear {
+  display: none;
+}
+input, button, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+select {
+  text-transform: none;
 }
 textarea {
   overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+button, select {
+  cursor: pointer;
+  text-transform: none;
+}
+button, [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
-summary::-webkit-details-marker {
-  display: none;
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
 }
-/*------------------------------------------------------------*/
-/*---------------------------------------------------------end*/
+/*--------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------normalize-&-reseter*/
+abbr[title] {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+code, kbd, samp, pre {
+  font-family: monospace, monospace;
+  font-size: 16px;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------for-development*/
+.development {
+  height: 100vh;
+}
+/*------------------------------------------------------------------------------------patterns*/
+/*----------------------------------------------------------------------------------------------
+@media (max-width: 1280px)
+@media (max-width: 1152px)
+@media (max-width: 1024px)
+@media (max-width: 854px) ! 16px
+@media (max-width: 768px)
+@media (max-width: 600px)
+@media (max-width: 480px)
+@media (max-width: 360px)
+
+&nbsp;
+
+line-height: calc((60 / 44) * 100%);
+any: calc(32px + 40 * ((100vw - 320px)/(1280 - 320)));
+
+@media (any-hover: hover) {
+  &:hover {
+    
+  }
+}
+----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------end*/
