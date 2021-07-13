@@ -45,7 +45,7 @@
   <div class="wrapper">
 
     <header class="header"><!--scroll-->
-      <div class="header__wrapper"><!--active-->
+      <div class="header__wrapper popup__lock"><!--active-->
         <div class="header__container container">
           <div class="header__body">
             <div class="header__burger burger__wrapper"><!--active-->
@@ -57,10 +57,10 @@
             </div>
             <nav class="header__navigation navigation__wrapper"><!--active-->
               <ul class="navigation__body">
-                <li><a href="index.html" class="navigation__link active">Home</a></li><!--todo-->
+                <li><a href="index.html" class="navigation__link active">Home</a></li>
                 <li><a href="work.html" class="navigation__link">Works</a></li>
                 <li><a href="blog.html" class="navigation__link">Blog</a></li>
-                <li><a href="#contact" class="navigation__link">Contact</a></li><!--todo-->
+                <li><a href="#contact" class="navigation__link contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -75,16 +75,14 @@
           <div class="hello__body">
             <div class="hello__case">
               <div class="hello__item">
-                <h1 class="hello__heading heading-main">Hi,&nbsp;I&nbsp;am&nbsp;John,<br>Creative Technologist</h1>
+                <h1 class="hello__heading heading__main">Hi,&nbsp;I&nbsp;am&nbsp;John,<br>Creative Technologist</h1>
                 <p class="hello__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 <a href="image/John_Resume.pdf" download="John_Resume.pdf" class="hello__link button">Download Resume</a>
               </div>
               <div class="hello__item">
-                <div class="hello__extra">
-                  <div class="hello__photo">
-                    <img srcset="image/main_256-256.jpg 1x, image/main_512-512.jpg 2x" src="image/main_512-512.jpg" alt="Photo">
-                  </div>
-                </div>
+                <a class="hello__photo popup__link" href="#popup__hello">
+                  <img srcset="image/main_256-256.jpg 1x, image/main_512-512.jpg 2x" src="image/main_512-512.jpg" alt="Photo">
+                </a>
               </div>
             </div>
           </div>
@@ -100,12 +98,12 @@
             </div>
             <div class="blog__case">
               <a href="#" class="blog__item">
-                <h2 class="blog__heading heading-small">Making a design system from scratch</h2>
+                <h2 class="blog__heading heading__small">Making a design system from scratch</h2>
                 <p class="blog__date">12 Feb 2020 <span>|</span> Design, Pattern</p>
                 <p class="blog__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
               </a>
               <a href="#" class="blog__item">
-                <h2 class="blog__heading heading-small">Creating pixel perfect icons in Figma</h2>
+                <h2 class="blog__heading heading__small">Creating pixel perfect icons in Figma</h2>
                 <p class="blog__date">12 Feb 2020 <span>|</span> Figma, Icon Design</p>
                 <p class="blog__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
               </a>
@@ -126,7 +124,7 @@
                   <img srcset="image/work_01_640-360.jpg 1x, image/work_01_1280-720.jpg 2x" src="image/work_01_1280-720.jpg" alt="Work #1">
                 </div>
                 <div class="work-item__content">
-                  <h2 class="work-item__heading heading-bold">Designing Dashboards</h2>
+                  <h2 class="work-item__heading heading__bold">Designing Dashboards</h2>
                   <p class="work-item__data"><span>2020</span>Dashboard</p>
                   <p class="work-item__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. </p>                  
                 </div>
@@ -136,7 +134,7 @@
                   <img srcset="image/work_02_640-360.jpg 1x, image/work_02_1280-720.jpg 2x" src="image/work_02_1280-720.jpg" alt="Work #2">
                 </div>
                 <div class="work-item__content">
-                  <h2 class="work-item__heading heading-bold">Vibrant Portraits of 2020</h2>
+                  <h2 class="work-item__heading heading__bold">Vibrant Portraits of 2020</h2>
                   <p class="work-item__data"><span>2018</span>Illustration</p>
                   <p class="work-item__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>                  
                 </div>
@@ -146,7 +144,7 @@
                   <img srcset="image/work_03_640-360.jpg, image/work_03_1280-720.jpg 2x" src="image/work_03_1280-720.jpg" alt="Work #3">
                 </div>
                 <div class="work-item__content">
-                  <h2 class="work-item__heading heading-bold">36 Days of Malayalam type</h2>
+                  <h2 class="work-item__heading heading__bold">36 Days of Malayalam type</h2>
                   <p class="work-item__data"><span>2018</span>Typography</p>
                   <p class="work-item__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>                  
                 </div>
@@ -193,9 +191,31 @@
             <p class="footer__authors-website">This website is made by <a href="https://www.facebook.com/galina.putintceva" target="_blank">GalinaVrn</a> and hosted on <a href="https://pages.github.com/" target="_blank">Github Pages</a>.</p>
           </div>
         </div>
-      </div> 
+      </div>
+      <a class="footer__image" target="_blank" href="image/website-image_640-360.jpg">
+        <img src="image/website-image_640-360.jpg" alt="Photo">
+      </a>
     </footer>
 
+  </div>
+
+  <div class="popup" id="popup__hello"><!--active-->
+    <div class="popup__body">
+      <div class="popup__content">
+        <a href="#" class="popup__close close">
+          <svg class="popup__svg" width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="m8.712 11.89c-0.5227-0.5213-0.8155-0.5421-1.39 0l-3.189 3.211c-1.234 1.23-1.777 1.23-3.136-0.1668-1.359-1.397-1.234-2.085-0.1882-3.128l3.325-3.326a0.7214 0.7194 0 0 0-0.07318-1.189l-3.136-3.128c-1.045-1.043-1.181-1.887 0-3.128 1.181-1.241 1.986-1.262 3.272 0l3.074 3.128a0.69 0.6881 0 0 0 1.16 0c0.6587-0.6777 2.603-2.617 3.429-3.493a1.526 1.522 0 0 1 2.405-0.1564c0.2509 0.2502 0.4914 0.4379 0.9305 0.8758 0.8991 0.8966 0.9828 1.637 0.05227 2.565l-3.419 3.399c-0.3764 0.3545-0.5436 0.6047-0.1673 0.98l3.419 3.409c1.15 1.147 1.286 1.772 0.05227 3.003l-0.6064 0.6047a1.662 1.658 0 0 1-2.572-0.2189z" stroke-width="1.044"/>
+          </svg>
+        </a>
+        <h2 class="popup__title heading__bold">This is me</h2>
+        <p class="popup__text text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi temporibus laborum aperiam ducimus necessitatibus fugiat. Nemo sequi magnam maxime aut quam accusamus, aperiam, provident beatae molestiae eius ad consectetur quis ipsam. Sint, facere cum?</p>
+        <div class="popup__extra">
+          <div class="popup__photo">
+            <img srcset="image/main_512-512.jpg 1x, image/main_1024-1024.jpg 2x" src="image/main_1024-1024.jpg" alt="Photo">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <!--    
   <div class="development"></div>
