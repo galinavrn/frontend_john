@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>John: Work</title>
+  <title>John: Contact</title>
   <!--theme-->
   <meta name="theme-color" content="rgb(255, 100, 100)">
   <meta name="msapplication-navbutton-color" content="rgb(255, 100, 100)"><!--windows phone-->
@@ -36,9 +36,9 @@
             <nav class="header__navigation navigation__wrapper"><!--active-->
               <ul class="navigation__body">
                 <li><a href="index.html" class="navigation__link">Home</a></li>
-                <li><a href="work.html" class="navigation__link active">Works</a></li>
+                <li><a href="work.html" class="navigation__link">Works</a></li>
                 <li><a href="blog.html" class="navigation__link">Blog</a></li>
-                <li><a href="#contact" class="navigation__link contact">Contact</a></li>
+                <li><a href="#contact" class="navigation__link contact active">Contact</a></li><!--fix-->
               </ul>
             </nav>
           </div>
@@ -48,29 +48,72 @@
 
     <main class="main">
 
-      <section class="page-detail section">
+      <section class="page section contact">
         <div class="page__container container">
-          <div class="page__body small">
-            <div class="page__about about__wrapper">
-              <h2 class="about__heading heading__bold">Designing Dashboards with usability in mind</h2>
-              <p class="about__data work-item__data"><span>2020</span>Dashboard, User Experience Design</p>
-              <p class="about__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-              <div class="about__image">
-                <img src="image/work-detail_01.jpg" alt="About work">
-              </div>
-            </div>
-            <div class="page__content content__wrapper">
-              <h3 class="content__heading heading__thin">Heading</h3>
-              <h4 class="content__subheading heading__small">Heading</h4>
-              <p class="content__text text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-              <div class="content__image page-about__image">
-                <img src="image/work-detail_02.jpg" alt="Image #1">
-              </div>
-              <div class="content__image page-about__image">
-                <img src="image/work-detail_03.jpg" alt="Image #2">
-              </div>
-            </div>
+          <div class="page__body">
+            <h2 class="page__heading heading__main">Contact</h2>
           </div>
+        </div>
+      </section>
+
+      <section class="data section">
+        <div class="container page__container">
+          <div class="data__body">
+            <h3 class="data__heading">Get in thouch</h3>
+            <form class="data__message message__body" action="#" id="message">
+              <div class="message__item">
+                <label class="message__label" for="message_name">Name*:</label>
+                <input class="message__input required" id="message_name" type="text" name="form_name">
+              </div>
+              <div class="message__item">
+                <label class="message__label" for="message_email">E-mail*:</label>
+                <input class="message__input required" id="message_email" type="email" name="form_email">
+              </div>
+              <div class="message__item">
+                <label class="message__label" for="message_select">Theme:</label>
+                <select class="message__input message__select" id="message_select" name="form__select">
+                  <option class="pageform__x" value="1" selected>Web Design</option>
+                  <option value="2">Typography</option>
+                  <option value="3">Illustration</option>
+                  <option value="4">Components</option>
+                  <option value="5">Other</option>
+                </select>
+              </div>
+              <div class="message__item">
+                <label class="message__label" for="message_text">Message:</label>
+                <textarea class="message__input message__textarea" id="message_text" name="form_text"></textarea>
+              </div>
+              <fieldset class="message__item">
+                <div class="message__grid">
+                  <legend class="message__legend message__span">Make a choice:</legend>
+                  <div class="message__option">
+                    <input class="message__radio" id="message_radioone" type="radio" name="form_radio" value="cookies" checked>
+                    <label class="message__text" for="message_radioone">Cookies</label>
+                  </div>
+                  <div class="message__option">
+                    <input class="message__radio" id="message_radiotwo" type="radio" name="form_radio" value="icecream">
+                    <label class="message__text" for="message_radiotwo">Icecream</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="message__item message__flex">
+                <label class="message__label" for="message_file">Attachment:</label>
+                <div class="message__attachment">
+                  <input class="message__file" id="message_file" type="file" name="form__file" accept=".jpg, .jpeg, .png, .gif">
+                  <p class="message__button button" aria-hidden="true">Add or drop a file here</p>
+                </div>
+                <div class="message__attachment">
+                  <div class="message__preview" id="message_preview"></div>
+                </div>
+              </div>
+              <div class="message__item message__option">
+                <input class="message__checkbox required" id="message_checkbox" type="checkbox" name="form_checkbox" checked>                      
+                <label class="message__text" for="message_checkbox">I accept the Terms of use and Privacy policy.*</label>
+                <p class="message__text">Read <a href="#" class="message__link">Terms of use</a> and <a href="#" class="message__link">Privacy policy</a>.</p>
+              </div>
+              <button class="message__submit button" type="submit" >Send</button>
+            </form>
+          </div>  
         </div>
       </section>
 
@@ -120,5 +163,6 @@
 
 -->
   <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

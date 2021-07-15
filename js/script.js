@@ -132,11 +132,13 @@ if (popupClosures.length > 0) {
   }
 }
 
-document.addEventListener("keydown", function (event) {
-  if (event.key = "Escape") {
-    const popupActive = document.querySelector(".popup.active");
-    popupClose (popupActive);
-  }
-});
+const popupActive = document.querySelector(".popup.active");
+if (popupActive) {
+  document.addEventListener("keydown", function (event) {
+    if (event.key = "Escape") {
+      popupClose (popupActive);
+    }
+  });
+}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------end*/
