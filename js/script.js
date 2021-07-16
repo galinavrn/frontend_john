@@ -17,14 +17,6 @@ if (burger) {
     burgerToggle ();
   });
 }
-
-const contact = document.querySelector(".navigation__link.contact");
-
-if (burger && contact) {
-  contact.addEventListener("click", function () {
-    burgerToggle ();
-  });
-}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------header*/
 const headerElement = document.querySelector(".header");

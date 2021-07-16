@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       inputPreview.innerHTML = `<img src="${event.target.result}" alt="File">`;
       inputPreview.style.marginLeft = "16px";
       inputPreview.style.width = "128px";
-
+      inputPreview.style.height = "80px";
     };
     fileReader.onerror = function (event) {
       alert("Something went wrong")

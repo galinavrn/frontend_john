@@ -38,7 +38,7 @@
                 <li><a href="index.html" class="navigation__link">Home</a></li>
                 <li><a href="work.html" class="navigation__link">Works</a></li>
                 <li><a href="blog.html" class="navigation__link">Blog</a></li>
-                <li><a href="#contact" class="navigation__link contact active">Contact</a></li><!--fix-->
+                <li><a href="contact.html" class="navigation__link contact active">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -57,7 +57,7 @@
       </section>
 
       <section class="data section">
-        <div class="container page__container">
+        <div class="container">
           <div class="data__body">
             <h3 class="data__heading">Get in thouch</h3>
             <form class="data__message message__body" action="#" id="message">
@@ -71,13 +71,16 @@
               </div>
               <div class="message__item">
                 <label class="message__label" for="message_select">Theme:</label>
-                <select class="message__input message__select" id="message_select" name="form__select">
-                  <option class="pageform__x" value="1" selected>Web Design</option>
-                  <option value="2">Typography</option>
-                  <option value="3">Illustration</option>
-                  <option value="4">Components</option>
-                  <option value="5">Other</option>
-                </select>
+                <div class="message__dropdown" id="message_dropdown" name="form_dropdown">
+                  <button class="message__input message__select" type="button" aria-haspopup="true">Select a theme</button>
+                  <ul class="message__listbox" role="listbox" aria-expanded="false">
+                    <li role="option" tabindex="0">Web Design</li>
+                    <li role="option" tabindex="0">Typography</li>
+                    <li role="option" tabindex="0">Illustration</li>
+                    <li role="option" tabindex="0">Components</li>
+                    <li role="option" tabindex="0">Other</li>
+                  </ul>
+                </div>
               </div>
               <div class="message__item">
                 <label class="message__label" for="message_text">Message:</label>
@@ -106,10 +109,12 @@
                   <div class="message__preview" id="message_preview"></div>
                 </div>
               </div>
-              <div class="message__item message__option">
-                <input class="message__checkbox required" id="message_checkbox" type="checkbox" name="form_checkbox" checked>                      
-                <label class="message__text" for="message_checkbox">I accept the Terms of use and Privacy policy.*</label>
-                <p class="message__text">Read <a href="#" class="message__link">Terms of use</a> and <a href="#" class="message__link">Privacy policy</a>.</p>
+              <div class="message__item">
+                <div class="message__option">
+                  <input class="message__checkbox required" id="message_checkbox" type="checkbox" name="form_checkbox" checked>
+                  <label class="message__label" for="message_checkbox">I accept the Terms of use and Privacy policy.*</label>
+                </div>
+                <p class="message__text">Read <a href="#" class="message__link">Terms of use</a> and <a href="#" class="message__link">Privacy policy.</a></p>
               </div>
               <button class="message__submit button" type="submit" >Send</button>
             </form>
@@ -164,5 +169,6 @@
 -->
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/select.js"></script>
 </body>
 </html>
