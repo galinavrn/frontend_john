@@ -1432,6 +1432,8 @@ body.active {
   left: 0;
   top: 0;
   width: 100%;
+  max-width: 100%;
+  max-height: 208px;
   padding: 4px 0px;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 4px rgba(150, 150, 150, 0.65);
@@ -1439,8 +1441,11 @@ body.active {
   background: var(--text-dark);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
+  overflow: auto;
 }
 .message__listbox[aria-expanded=true] {
   opacity: 1;
